@@ -413,8 +413,8 @@ if display_table_positions
             id = array.get(opened_short, i -1)
             if id != 0
                 table.cell(opened_positions_table, i, 0, "Short " + str.tostring(id), text_color=color.white, text_size=size.tiny, bgcolor = color.red)
-                table.cell(opened_positions_table, i, 1, "Open: " + str.tostring(math.round(grid_level(i), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
-                table.cell(opened_positions_table, i, 2, "Close: " + str.tostring(math.round(exit_short(i), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
+                table.cell(opened_positions_table, i, 1, "Open: " + str.tostring(math.round(grid_level(id), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
+                table.cell(opened_positions_table, i, 2, "Close: " + str.tostring(math.round(exit_short(id), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
             else
                 table.cell(opened_positions_table, i, 0, "Short Instant", text_color=color.white, text_size=size.tiny, bgcolor = color.red)
     if strategy.position_size > 0 and array.size(opened_long)  != 0
@@ -422,7 +422,7 @@ if display_table_positions
             id = array.get(opened_long, i -1)
             if id != 0
                 table.cell(opened_positions_table, i, 0, "Long " + str.tostring(id), text_color=color.white, text_size=size.tiny, bgcolor = color.green)
-                table.cell(opened_positions_table, i, 1, "Open: " + str.tostring(math.round(grid_level(i), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
-                table.cell(opened_positions_table, i, 2, "Close: " + str.tostring(math.round(exit_long(i), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
+                table.cell(opened_positions_table, i, 1, "Open: " + str.tostring(math.round(grid_level(id), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
+                table.cell(opened_positions_table, i, 2, "Close: " + str.tostring(math.round(exit_long(id), decimal_places)), text_color=color.white, text_size=size.tiny, bgcolor = color.black)
             else
                 table.cell(opened_positions_table, i, 0, "Long Instant", text_color=color.white, text_size=size.tiny, bgcolor = color.green)
